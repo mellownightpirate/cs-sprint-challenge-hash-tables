@@ -2,9 +2,19 @@ def intersection(arrays):
     """
     YOUR CODE HERE
     """
-    # Your code here
-
-    return result
+    array_hash = {}
+    repeating_elements = {}
+    # go thorugh every element in all arrays
+    for array in arrays:
+        for element in array:
+    # if it's not in hash already, add it
+            if element not in array_hash:
+                array_hash[element] = None
+    # if it's in hash, add it to 'repeating elements' hash
+            else:
+                repeating_elements[element] = None
+    # return a list of repeating elements
+    return list(repeating_elements)
 
 
 if __name__ == "__main__":

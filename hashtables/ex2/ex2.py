@@ -9,6 +9,16 @@ def reconstruct_trip(tickets, length):
     """
     YOUR CODE HERE
     """
-    # Your code here
+     # last element is the one with destination of NONE
+    # first element is one which doean't appear as a destination
+    sources = {}
+    for ticket in tickets:
+        sources[ticket.source] = ticket.destination
+    # find first element
+    route = []
+    current = "NONE"
+    for _ in range(len(tickets)):
+        route.append(sources[current])
+        current = sources[current]
 
     return route
